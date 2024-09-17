@@ -1,9 +1,10 @@
 import React from "react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Hand, Search, Edit } from "lucide-react";
+import { Hand, Search, Edit,LucideIcon } from "lucide-react";
 
-// import { Hand ,LucideIcon} from "lucid-react";
+
+
 
 const Services = () => {
   return (
@@ -34,7 +35,7 @@ export default Services;
 interface services {
   title: string;
   discription: string;
-  icon: any;
+  icon: LucideIcon;
 }
 
 const services: services[] = [

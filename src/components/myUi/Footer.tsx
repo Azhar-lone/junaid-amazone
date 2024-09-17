@@ -3,7 +3,7 @@ import Link from "next/link";
 
 
 // Icons
-import { BarChart, LinkedinIcon, FacebookIcon ,SearchIcon,MailIcon,PhoneCallIcon} from "lucide-react";
+import { BarChart, LinkedinIcon,SearchIcon,MailIcon,PhoneCallIcon} from "lucide-react";
 const Footer = () => {
   return (
     <footer className="relative bottom-0 bg-secondary  justify-center  flex flex-col gap-4 p-2 ">
