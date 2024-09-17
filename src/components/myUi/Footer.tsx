@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
+
 // Icons
-import { BarChart, LinkedinIcon, FacebookIcon } from "lucide-react";
+import { BarChart, LinkedinIcon, FacebookIcon ,SearchIcon,MailIcon,PhoneCallIcon} from "lucide-react";
 const Footer = () => {
   return (
     <footer className="relative bottom-0 bg-secondary  justify-center  flex flex-col gap-4 p-2 ">
       <div className="flex justify-around pt-10">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-2 *:">
           <div className="flex">
             <BarChart className="size-8" />
             <h1 className=" md:text-4xl font-bold pr-2">My Amazon Guy</h1>
@@ -20,12 +21,23 @@ const Footer = () => {
               </Link>
             ))}
           </div>
+          <h1 className="font-bold flex gap-2">
+            <SearchIcon /> Atlanta, GA
+          </h1>
+          <h1 className="font-bold flex gap-2">
+            <PhoneCallIcon /> +0 242-425-2424
+          </h1>
+          <h1 className="font-bold flex gap-2">
+            <MailIcon /> someone@gmail.com
+          </h1>
+
+
         </div>
 
         {ulLinks.map((link, index) => (
           <div className="p-5" key={index}>
-            <h1 className="font-semibold text-xl">{link.ul}</h1>
-            <ul className="flex flex-col gap-3">
+            <h1 className="font-semibold text-xl pb-2">{link.ul}</h1>
+            <ul className="flex flex-col gap-3 ">
               {link.links.map((li, index) => (
                 <Link href={li.href} key={index}>
                   {li.text}
