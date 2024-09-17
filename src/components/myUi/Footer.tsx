@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col gap-2 *:">
           <div className="flex">
             <BarChart className="size-8" />
-            <h1 className=" md:text-4xl font-bold pr-2">My Amazon Guy</h1>
+            <h1 className=" md:text-4xl font-bold pr-2">My Amazon Scale</h1>
           </div>
 
           <div className="flex gap-1 p-2">
@@ -22,13 +22,13 @@ const Footer = () => {
             ))}
           </div>
           <h1 className="font-bold flex gap-2">
-            <SearchIcon /> Atlanta, GA
+            <SearchIcon /> Gilgit, Pakistan
           </h1>
           <h1 className="font-bold flex gap-2">
-            <PhoneCallIcon /> +0 242-425-2424
+            <PhoneCallIcon /> +92 3484260244
           </h1>
           <h1 className="font-bold flex gap-2">
-            <MailIcon /> someone@gmail.com
+            <MailIcon /> myamazonescale@gmail.com
           </h1>
 
 
@@ -57,14 +57,11 @@ export default Footer;
 
 const IconLinks = [
   {
-    href: "#",
+    href: "https://www.linkedin.com/in/junaid-jumshid/",
     Icon: LinkedinIcon,
   },
 
-  {
-    href: "#",
-    Icon: FacebookIcon,
-  },
+
 ];
 
 const ulLinks = [

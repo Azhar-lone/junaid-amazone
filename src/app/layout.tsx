@@ -15,8 +15,8 @@ const dev_siteUrl = "https://#";
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.SITE_URL || siteUrl),
   title: {
-    default: "|",
-    template: "%s | Junaid",
+    default: "My Amazone Scale",
+    template: "%s | My Amazone Scale",
   },
   description: "website of Amazone virtual assistant junaid jumshed",
   keywords: ["junaid", "amazone"],

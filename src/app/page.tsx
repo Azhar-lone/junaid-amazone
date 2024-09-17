@@ -20,12 +20,10 @@ export default Home;
 
 const heroData = {
   text: {
-    h1: "Heading",
-    p: `
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi repellendus atque, magni iste alias ab rem! Molestiae repellendus sunt pariatur quas sapiente quos maxime reprehenderit a! Quis, eligendi? Commodi, ratione?
-    `,
+    h1: "The Amazon agency that gets your products seen and sold",
+    p: `Have great products, but sales are sluggish? `,
   },
-  imgSrc: "/next.svg",
+  imgSrc: "https://media.licdn.com/dms/image/v2/D4E22AQHRYo7DV00dBQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1723216761071?e=1729728000&v=beta&t=YBNXv3Blax8PORNM569I_sf2ybGWwUqv_pSPeaYyDT8",
 };
 const Hero: React.FC = () => {
   return (

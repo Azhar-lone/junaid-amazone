@@ -76,8 +76,8 @@ const Header = () => {
 export default Header;
 
 const Data = {
-  Title: "My Amazon Guy",
-  PoneNumber: "+0 242-425-2424",
+  Title: "My Amazon Scale",
+  PoneNumber: "+92 3484260244",
   links: [
     {
       text: "Services",
