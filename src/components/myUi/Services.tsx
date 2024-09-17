@@ -1,10 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Hand, Search, Edit,LucideIcon } from "lucide-react";
-
-
-
+import { Hand, Search, Edit, LucideIcon } from "lucide-react";
+import { buttonVariants } from "../ui/button";
 
 const Services = () => {
   return (
@@ -15,14 +14,20 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="shadow-primary shadow-lg h-60 mt-5  p-2 px-4 rounded-2xl border    md:w-[24%] "
+            className="shadow-primary shadow-lg h-60 mt-5 flex flex-col items-center  p-2 px-4 rounded-2xl border    md:w-[24%] "
           >
             <h1 className="text-2xl text-center flex flex-col items-center justify-center gap-1">
-            <service.icon className="size-20"/> {service.title}
+              <service.icon className="size-14" /> {service.title}
             </h1>
-            <ScrollArea className=" p-1 overflow-y-auto h-[80%]">
+            <ScrollArea className=" p-1 overflow-y-auto h-[40%]">
               {service.discription}
             </ScrollArea>
+            <Link
+              className={buttonVariants({ variant: "outline" })}
+              href={"#" + service.title}
+            >
+              Learn More
+            </Link>
           </div>
         ))}
       </div>
