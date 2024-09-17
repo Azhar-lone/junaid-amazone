@@ -23,7 +23,7 @@ const Header = () => {
           <h1 className=" md:text-3xl  font-bold md:pr-2">{Data.Title}</h1>
           <ModeToggle />
         </div>
-        <div className="flex gap-2 items-center w-[45%] ">
+        <div className="flex gap-2 items-center md:w-[45%] ">
           <PhoneCallIcon className="md:size-8 size-4 "/>
           <h1 className="md:text-xl font-bold">{Data.PoneNumber}</h1>
         </div>
