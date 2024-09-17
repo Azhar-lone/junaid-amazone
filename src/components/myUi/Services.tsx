@@ -31,7 +31,7 @@ interface services {
   discription: string;
 }
 
-let services: services[] = [
+const services: services[] = [
   {
     title: "E-commerce Site Development",
     discription: `I specialize in developing robust and scalable e-commerce platforms tailored to your business needs.
