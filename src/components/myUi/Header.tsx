@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSub,
   DropdownMenuSubContent,
-  DropdownMenuSubTrigger
+  // DropdownMenuSubTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { ModeToggle } from "./mode-toggle";

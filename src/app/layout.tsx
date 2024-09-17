@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "@/app/globals.css";
 
 // components
@@ -9,8 +9,8 @@ import Footer from "@/components/myUi/Footer";
 // context
 import { ThemeProvider } from "@/context/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
-const siteUrl = "https://#";
+// const inter = Inter({ subsets: ["latin"] });
+// const siteUrl = "https://#";
 const dev_siteUrl = "https://#";
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.SITE_URL || siteUrl),
@@ -27,20 +27,20 @@ export const metadata: Metadata = {
     },
   ],
   publisher: "vercel",
-  openGraph: {
-    images: "/og-image.png",
-  },
-  twitter: {
-    title: {
-      default: "|",
-      template: "%s | Junaid",
-    },
-    description: "website of Amazone virtual assistant junaid jumshed",
-    card: "summary_large_image",
-    creator: "Azhar Lone",
-    site: process.env.SITE_URL || siteUrl,
-    images: "/og-image.png",
-  },
+  // openGraph: {
+  //   images: "/og-image.png",
+  // },
+  // twitter: {
+  //   title: {
+  //     default: "|",
+  //     template: "%s | Junaid",
+  //   },
+  //   description: "website of Amazone virtual assistant junaid jumshed",
+  //   card: "summary_large_image",
+  //   creator: "Azhar Lone",
+  //   site: process.env.SITE_URL || siteUrl,
+  //   images: "/og-image.png",
+  // },
 };
 
 export default function RootLayout({
@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

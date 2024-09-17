@@ -15,7 +15,7 @@ const Footer = () => {
 
           <div className="flex gap-1 p-2">
             {IconLinks.map(({ Icon, href }, index) => (
-              <Link href={href}>
+              <Link href={href} key={index}>
                 <Icon />
               </Link>
             ))}
@@ -43,7 +43,7 @@ const Footer = () => {
 
 export default Footer;
 
-let IconLinks = [
+const IconLinks = [
   {
     href: "#",
     Icon: LinkedinIcon,
@@ -55,7 +55,7 @@ let IconLinks = [
   },
 ];
 
-let ulLinks = [
+const ulLinks = [
   {
     ul: "Services",
     links: [
