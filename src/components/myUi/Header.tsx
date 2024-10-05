@@ -1,17 +1,7 @@
-// import { Button } from "../ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  // DropdownMenuSubTrigger
-} from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { ModeToggle } from "./mode-toggle";
-import { BarChart, PhoneCallIcon, ArrowDown } from "lucide-react";
-
+import { BarChart, PhoneCallIcon } from "lucide-react";
 // Types
 
 const Header = () => {
@@ -24,46 +14,20 @@ const Header = () => {
           <ModeToggle />
         </div>
         <div className="flex gap-2 items-center w-[45%] md:w-fit ">
-          <PhoneCallIcon className="md:size-8 size-4 "/>
+          <PhoneCallIcon className="md:size-8 size-4 " />
           <h1 className="md:text-xl font-bold">{Data.PoneNumber}</h1>
         </div>
       </div>
       <div className="md:flex justify-between  items-center hidden">
-        <div className="flex gap-10 ">
+        <div className="flex gap-10 font-medium">
           {Data.links.map((link, index) => (
-            <div key={index} className="hover:cursor-pointer">
-              {!link.subLinks ? (
-                <h1 className="font-semibold hover:text-red-400 ">
-                  {link.text}
-                </h1>
-              ) : (
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="font-semibold hover:text-red-400 flex">
-                    {link.text}
-                    <ArrowDown />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="flex gap-4">
-                    {link.subLinks.map((subLink, index) => (
-                      <DropdownMenuItem
-                        key={index}
-                        className="flex gap-5 flex-col"
-                      >
-                        {subLink.subLinkTitle}
-                        <DropdownMenuSub>
-                          {subLink.moreLinks &&
-                            subLink.moreLinks.map((value, index) => (
-                              <DropdownMenuSubContent key={index}>
-                                <h1>{value.text}</h1>
-                                <value.icon />
-                              </DropdownMenuSubContent>
-                            ))}
-                        </DropdownMenuSub>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              )}
-            </div>
+            <Link
+              href={`#${link.text.toLowerCase()}`}
+              key={index}
+              className={" hover:text-red-600 hover:cursor-pointer"}
+            >
+              {link.text}
+            </Link>
           ))}
         </div>
 
@@ -78,37 +42,5 @@ export default Header;
 const Data = {
   Title: "My Amazon Scale",
   PoneNumber: "+92 3484260244",
-  links: [
-    {
-      text: "Services",
-      subLinks: [
-        {
-          subLinkTitle: "Seo",
-          moreLinks: [
-            {
-              text: "Testing",
-              icon: PhoneCallIcon,
-            },
-          ],
-        },
-        {
-          subLinkTitle: "asfsafa",
-        },
-        {
-          subLinkTitle: "asfsafasdg",
-        },
-        {
-          subLinkTitle: "Seo",
-          moreLinks: [],
-        },
-        {
-          subLinkTitle: "asfsafa",
-        },
-        {
-          subLinkTitle: "asfsafasdg",
-        },
-      ],
-    },
-    { text: "Testimonials" },
-  ],
+  links: [{ text: "Services" }, { text: "Testimonials" },{text:"Leadership"},{text:"SOPs"}],
 };

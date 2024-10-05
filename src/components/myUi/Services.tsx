@@ -53,11 +53,11 @@ const services: services[] = [
   {
     title: "Copywriting",
     discription: `Want your product to stand out? Our expert copywriting and Amazon SEO services will make it a top contender`,
-    icon: Search,
+    icon: Edit,
   },
   {
     title: "SEO",
     discription: `Watch your search rankings soar with our proven 4-phase Amazon SEO plan. Results in just 90 days.`,
-    icon: Edit,
+    icon:  Search,
   },
 ];
