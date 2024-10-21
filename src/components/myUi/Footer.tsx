@@ -1,9 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
-
 // Icons
-import { BarChart, LinkedinIcon,SearchIcon,MailIcon,PhoneCallIcon} from "lucide-react";
+import {
+  BarChart,
+  LinkedinIcon,
+  SearchIcon,
+  MailIcon,
+  PhoneCallIcon,
+} from "lucide-react";
 const Footer = () => {
   return (
     <footer className="relative bottom-0 bg-secondary  justify-center  flex flex-col flex-wrap gap-4 p-2 ">
@@ -24,14 +29,18 @@ const Footer = () => {
           <h1 className="font-bold flex gap-2">
             <SearchIcon /> Gilgit, Pakistan
           </h1>
-          <h1 className="font-bold flex gap-2">
+          <Link
+            className="font-bold flex gap-2  hover:text-red-600 hover:cursor-pointer"
+            href={"tel:+923484260244"}
+          >
             <PhoneCallIcon /> +92 3484260244
-          </h1>
-          <h1 className="font-bold flex gap-2">
+          </Link>
+          <Link
+            className="font-bold flex gap-2  hover:text-red-600 hover:cursor-pointer"
+            href={"mailto:myamazonescale@gmail.com"}
+          >
             <MailIcon /> myamazonescale@gmail.com
-          </h1>
-
-
+          </Link>
         </div>
         {ulLinks.map((link, index) => (
           <div className="md:p-5 p-2 flex flex-col " key={index}>
@@ -40,14 +49,19 @@ const Footer = () => {
               {link.links.map((li, index) => (
                 <Link href={li.href} key={index}>
                   {li.text}
-                </Link> 
+                </Link>
               ))}
             </ul>
           </div>
         ))}
       </div>
 
-      <h1 className="text-muted">2024 copyrights @Azhar-lone</h1>
+      <h1 className="text-muted">
+        2024 copyrights{" "}
+        <Link href={"https://azhar-lone-portfolio.vercel.app"} target="_blank">
+          @Azhar-lone
+        </Link>
+      </h1>
     </footer>
   );
 };
@@ -59,8 +73,6 @@ const IconLinks = [
     href: "https://www.linkedin.com/in/junaid-jumshid/",
     Icon: LinkedinIcon,
   },
-
-
 ];
 
 const ulLinks = [

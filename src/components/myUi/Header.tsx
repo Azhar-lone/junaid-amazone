@@ -13,16 +13,19 @@ const Header = () => {
           <h1 className=" md:text-3xl  font-bold md:pr-2">{Data.Title}</h1>
           <ModeToggle />
         </div>
-        <div className="flex gap-2 items-center w-[45%] md:w-fit ">
+        <Link
+          className="flex gap-2 items-center w-[45%] md:w-fit  hover:text-red-600 hover:cursor-pointer "
+          href={"tel:" + Data.PoneNumber}
+        >
           <PhoneCallIcon className="md:size-8 size-4 " />
           <h1 className="md:text-xl font-bold">{Data.PoneNumber}</h1>
-        </div>
+        </Link>
       </div>
       <div className="md:flex justify-between  items-center hidden">
         <div className="flex gap-10 font-medium">
           {Data.links.map((link, index) => (
             <Link
-              href={`#${link.text.toLowerCase()}`}
+              href={link.text=="Home"?"/" :`/${link.text.toLowerCase()}`}
               key={index}
               className={" hover:text-red-600 hover:cursor-pointer"}
             >
@@ -42,5 +45,11 @@ export default Header;
 const Data = {
   Title: "My Amazon Scale",
   PoneNumber: "+92 3484260244",
-  links: [{ text: "Services" }, { text: "Testimonials" },{text:"Leadership"},{text:"SOPs"}],
+  links: [
+    { text: "Home" },
+    { text: "Services" },
+    { text: "Testimonials" },
+    { text: "Leadership" },
+    { text: "SOPs" },
+  ],
 };

@@ -14,11 +14,12 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="shadow-primary shadow-lg h-60 mt-5 flex flex-col items-center  p-2 px-4 rounded-2xl border    md:w-[24%] "
+            className="  h-60 mt-5 flex flex-col items-center  p-2 px-4 rounded-tr-3xl border    md:w-[32%] justify-center"
           >
             <h1 className="text-2xl text-center flex flex-col items-center justify-center gap-1">
               <service.icon className="size-14" /> {service.title}
             </h1>
+           <hr />
             <ScrollArea className=" p-1 overflow-y-auto h-[40%]">
               {service.discription}
             </ScrollArea>
@@ -46,7 +47,8 @@ interface services {
 const services: services[] = [
   {
     title: "PPC",
-    discription: `Having trouble with your catalog? We’ll handle it.
+    discription: `
+Boost sales, cut costs. We’re your partner in transparent, high-performing Amazon advertising.
 `,
     icon: Hand,
   },
