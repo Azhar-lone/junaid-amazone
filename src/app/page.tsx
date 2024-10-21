@@ -5,7 +5,7 @@ import Container from "@/components/myUi/Container";
 // pages
 import FAQs from "@/components/myUi/FAQs";
 import Services from "@/components/myUi/Services";
-
+import WAbutton from "@/components/myUi/WA-button";
 const Home: React.FC = () => {
   return (
     <Container>
@@ -23,11 +23,13 @@ const heroData = {
     h1: "The Amazon agency that gets your products seen and sold",
     p: `Have great products, but sales are sluggish? `,
   },
-  imgSrc: "https://media.licdn.com/dms/image/v2/D4E22AQHRYo7DV00dBQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1723216761071?e=1729728000&v=beta&t=YBNXv3Blax8PORNM569I_sf2ybGWwUqv_pSPeaYyDT8",
+  imgSrc:
+    "https://media.licdn.com/dms/image/v2/D4E22AQHRYo7DV00dBQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1723216761071?e=1729728000&v=beta&t=YBNXv3Blax8PORNM569I_sf2ybGWwUqv_pSPeaYyDT8",
 };
 const Hero: React.FC = () => {
   return (
     <section>
+      <WAbutton />
       <div className=" flex flex-col md:flex-row items-center justify-center mx-auto w-[90%] p-2 mt-2">
         {/* Text section */}
         <section>

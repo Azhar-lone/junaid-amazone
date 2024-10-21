@@ -4,11 +4,11 @@ import Link from "next/link";
 // Icons
 import {
   BarChart,
-  LinkedinIcon,
   SearchIcon,
   MailIcon,
   PhoneCallIcon,
 } from "lucide-react";
+import {RiWhatsappLine,RiLinkedinFill} from "react-icons/ri"
 const Footer = () => {
   return (
     <footer className="relative bottom-0 bg-secondary  justify-center  flex flex-col flex-wrap gap-4 p-2 ">
@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="flex gap-1 p-2">
             {IconLinks.map(({ Icon, href }, index) => (
               <Link href={href} key={index}>
-                <Icon />
+                <Icon className="size-8"/>
               </Link>
             ))}
           </div>
@@ -56,9 +56,9 @@ const Footer = () => {
         ))}
       </div>
 
-      <h1 className="text-muted">
+      <h1 className="text-center text-xl">
         2024 copyrights{" "}
-        <Link href={"https://azhar-lone-portfolio.vercel.app"} target="_blank">
+        <Link href={"https://azhar-lone-portfolio.vercel.app"} target="_blank" className="hover:text-red-600">
           @Azhar-lone
         </Link>
       </h1>
@@ -71,8 +71,12 @@ export default Footer;
 const IconLinks = [
   {
     href: "https://www.linkedin.com/in/junaid-jumshid/",
-    Icon: LinkedinIcon,
+    Icon: RiLinkedinFill,
   },
+  {
+    Icon:RiWhatsappLine,
+    href:"https://wa.me/923484260244"
+  }
 ];
 
 const ulLinks = [
