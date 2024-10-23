@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/app/globals.css";
 
 // components
@@ -9,11 +9,11 @@ import Footer from "@/components/myUi/Footer";
 // context
 import { ThemeProvider } from "@/context/theme-provider";
 
-// const inter = Inter({ subsets: ["latin"] });
-// const siteUrl = "https://#";
-const dev_siteUrl = "https://#";
+const inter = Inter({ subsets: ["latin"] });
+const siteUrl = "https://junaid-amazone.vercel.app";
+const dev_siteUrl = "https://azhar-lone-portfolio.vercel.app";
 export const metadata: Metadata = {
-  // metadataBase: new URL(process.env.SITE_URL || siteUrl),
+  metadataBase: new URL(process.env.SITE_URL || siteUrl),
   title: {
     default: "My Amazone Scale",
     template: "%s | My Amazone Scale",
@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body >
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

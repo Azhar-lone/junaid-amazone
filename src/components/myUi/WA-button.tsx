@@ -8,12 +8,12 @@ const WAbutton = () => {
       href={
         "https://wa.me/923484260244?text=" +
         encodeURIComponent(
-          "hello!\n I'd like to inquire you about your services."
+          "hello!\nI'd like to inquire you about your services."
         )
       }
       className="fixed right-5 bottom-8 "
     >
-      <RiWhatsappLine className="size-12 animate-bounce" />
+      <RiWhatsappLine className="size-12 animate-bounce bg-green-500 rounded-2xl" />
     </Link>
   );
 };

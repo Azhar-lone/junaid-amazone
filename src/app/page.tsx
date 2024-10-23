@@ -6,12 +6,15 @@ import Container from "@/components/myUi/Container";
 import FAQs from "@/components/myUi/FAQs";
 import Services from "@/components/myUi/Services";
 import WAbutton from "@/components/myUi/WA-button";
+import AddEmail from "./email/page";
 const Home: React.FC = () => {
   return (
     <Container>
       <Hero />
       <FAQs />
       <Services />
+      <hr />
+      <AddEmail />
     </Container>
   );
 };

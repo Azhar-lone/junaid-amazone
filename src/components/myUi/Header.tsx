@@ -8,8 +8,8 @@ const Header = () => {
   return (
     <nav className="flex  flex-col  justify-around   md:px-16 py-2 shadow-lg w-[100%]  bg-background border-b  ">
       <div className="flex justify-between items-center py-2">
-        <div className="flex  items-center">
-          <BarChart className="md:size-8 size-4" />
+        <div className="flex  items-center ">
+          <BarChart className="md:size-8 size-4 text-red-400" />
           <h1 className=" md:text-3xl  font-bold md:pr-2">{Data.Title}</h1>
           <ModeToggle />
         </div>
